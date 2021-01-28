@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<head>
+    <title>Roderick Jazpher's Blog</title>
+    
+    <!---------- google fonts --------------->
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+</head>
+<body>
+            <!----------------- style starts here ------------------->
+            <style>
+                
+            /*--------------- basic styling --------------- */
+html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      font-family: "Anton" !important;
+      background: #ffd6a5 !important;
+      color: #fff !important;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.whitespace {
+      width: 100%;
+      height: 100px;
+}
+
+@media(max-width: 768px) {
+      .whitespace {
+            display: none;
+      }
+}
+            /*--------------------- navigation ---------------------*/
+              nav {
+      width: 100%;
+      background: #14213d;
+      height: 80px;
+      position: fixed;
+      z-index: 1;
+      font-family: Anton;
+}
+
+nav #logo {
+      float: left;
+      display: block;
+      margin-left: 82px;
+      line-height: 80px;
+      font-weight: bold;
+}
+
+nav #logo a {
+      color: #fff;
+      transition: all 0.3s ease-out;
+}
+
+nav #logo a:link {
+      text-decoration: none;
+}
+
+nav #menu {
+      float: left;
+      right: 80px;
+      position: fixed;
+}
+
+nav #menu li {
+      padding-left: 40px;
+      display: inline-block;
+      cursor: pointer;
+      font-weight: 300;
+      line-height: 80px;
+      position: relative;
+      transition: all 0.3s ease-out;
+}
+
+nav #menu li span {
+      font-weight: 700;
+}
+
+nav #menu li a {
+      color: #fff;
+}
+
+nav #menu li a:link {
+      text-decoration: none;
+}
+
+#toggle {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      font-weight: 300;
+      z-index: 2;
+      width: 30px;
+      height: 30px;
+      cursor: pointer;
+      float: right;
+      transition: all 0.3s ease-out;
+      visibility: hidden;
+      opacity: 0;
+}
+
+.close-btn {
+      position: absolute;
+      right: 16px;
+      font-weight: 300;
+      z-index: 2;
+      cursor: pointer;
+      top: -2px;
+      line-height: 80px;
+}
+
+#resize {
+      z-index: 1;
+      top: 0px;
+      position: fixed;
+      background: #0f0f0f;
+      width: 100%;
+      height: 100%;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 1s ease-out;
+}
+
+#resize #menu {
+      height: 90px;
+      position: absolute;
+      left: 45%;
+      transform: translateX(-40%);
+      text-align: center;
+      display: table-cell;
+      vertical-align: center;
+}
+
+#resize #menu li {
+      display: block;
+      text-align: center;
+      padding: 10px 0;
+      font-size: 50px;
+      min-height: 50px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+}
+
+#resize li:nth-child(1) {
+      margin-top: 140px;
+}
+
+#resize #menu li a {
+      color: #fff;
+}
+
+#resize #menu li a:link {
+      text-decoration: none;
+}
+
+#resize.active {
+      visibility: visible;
+      opacity: 1;
+}
+
+@media(max-width: 768px) {
+      #toggle {
+            visibility: visible;
+            opacity: 1;
+            margin-top: 6px;
+            margin-right: 4px;
+      }
+
+      nav #logo {
+            margin-left: 24px;
+      }
+
+      #menu a {
+            font-size: 20px;
+            font-weight: 300;
+      }
+
+      #resize li span {
+            font-weight: bolder;
+      }
+
+      nav #menu {
+            display: none;
+      }
+}
+
+@media(min-width: 768px) {
+      #resize {
+            visibility: hidden !important;
+      }
+}
+
+                /*-------------------- informations section ---------------*/
+h6 {
+      text-align: center;
+      font-size: 25px;
+      font-family: "Russo One";
+}
+
+.vertical {
+      margin-top: 40px;
+      border-left: 1px solid #fff;
+      height: 80px;
+      position: absolute;
+      left: 50%;
+}
+
+.project {
+      height: 500px;
+}
+
+.project1 {
+      background: url(https://i.imgur.com/gkakcpz.jpg) 
+      no-repeat 99% 99%;
+      background-size: 477px 477px;
+}
+
+.project1::after {
+      content: "math.";
+      font-family: "Russo One";
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 8%;
+      left: 63%;
+      right: 0;
+      bottom: 0;
+}
+
+.project2 {
+      background: url(https://i.imgur.com/NU8JXml.jpg) 
+      no-repeat 1% 1%;
+      background-size: 480px 477px;
+}
+
+.project2::after {
+      content: "science.";
+      font-family: "Russo One";
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 80%;
+      left: 31%;
+      right: 0;
+      bottom: 0;
+}
+
+.project3 {
+      background: url(https://i.imgur.com/2gzLvPh.jpg) 
+      no-repeat 99% 99%;
+      background-size: 477px 477px;
+}
+
+.project3::after {
+      content: "socstud.";
+      font-family: "Russo One";
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 80%;
+      left: 60%;
+      right: 0;
+      bottom: 0;
+}
+
+.project4 {
+      background: url(https://i.imgur.com/09QiNqW.jpg)
+      no-repeat 1% 1%;
+      background-size: 477px 477px;
+}
+
+.project4::after {
+      content: "filipino.";
+      font-family: "russo one";
+      font-size: 36px;
+      position: relative;
+      color: #fff;
+      display: block;
+      top: 10%;
+      left: 32%;
+      right: 0;
+      bottom: 0;
+}
+
+@media(max-width: 768px) {
+      .project {
+            width: 90% !important;
+            margin: 14px auto;
+      }
+
+      .vertical {
+            display: none;
+      }
+
+      .project1::after, .project2::after, .project3::after, .project4::after {
+            display: none;
+      }
+}              
+            </style>
+            <!----------- style end here --------------->
+    
+    
+    
+            <!----------- navbar starts here ------------>
+            <nav>
+                <span id="logo">
+                    <a href="index.html">jazpher</a>
+                </span>
+                
+                <ul id="menu">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="math.html" target="_blank">math</a></li>
+                    <li><a href="science.html" target="_blank">science</a></li>
+                    <li><a href="socstud.html" target="_blank">socstud</a></li>
+                    <li><a href="filipino.html" target="_blank">filipino</a></li>
+                </ul>
+                
+                <div id="toggle">
+                        <div class="span">menu</div>
+                  </div>
+            </nav>
+    
+             <div id="toggle">
+                        <div class="span">menu</div>
+                  </div>
+
+
+            <div id="resize">
+                  <div class="close-btn">close</div>
+
+                  <ul id="menu">
+                    <li><a href="index.html">home</a></li>
+                    <li><a href="math.html" target="_blank">math</a></li>
+                    <li><a href="science.html" target="_blank">science</a></li>
+                    <li><a href="socstud.html" target="_blank">socstud</a></li>
+                    <li><a href="filipino.html" target="_blank">filipino</a></li>
+                  </ul>
+    </div>
+                <!---------------- navbar ends here ----------------->
+                
+                <!---------------- informations starts here --------------------->
+                  <div class="container-fluid">
+                  <br><br><br>
+
+                  <h6>Selected Subjects</h6>
+
+                  <div class="vertical"></div>
+                  <br>
+
+                  <div class="whitespace"></div>
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-8"></div>
+
+                        <div class="col-lg-4 project project1" onclick="location.href='math.html'"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-6 project project2" onclick="location.href='science.html'"></div>
+
+                        <div class="col-lg-6"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-7"></div>
+
+                        <div class="col-lg-4 project project3" onclick="location.href='socstud.html'"></div>
+
+                        <div class="col-lg-1"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+
+                  <div class="row">
+                        <div class="col-lg-1"></div>
+
+                        <div class="col-lg-5 project project4" onclick="location.href='filipino.html'"></div>
+
+                        <div class="col-lg-6"></div>
+                  </div>
+
+                  <div class="whitespace"></div>
+            </div>
+
+</body>
